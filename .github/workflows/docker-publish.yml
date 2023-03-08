@@ -37,5 +37,4 @@ jobs:
         with:
           push: true
           build-args: |
-            version=${{ steps.get_version.outputs.VERSION }}
-          tags: ${{ secrets.ACR_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ version }}
+          tags: ${{ secrets.ACR_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.get_version.outputs.VERSION }}
